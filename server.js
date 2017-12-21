@@ -1,5 +1,6 @@
 // loading express 
-var express = required('express');
+
+var express = require('express');
 var app = express();
 
 // loading parser
@@ -22,7 +23,7 @@ var port = process.env.PORT ||8080;
 
 
 app.use(bodyParser.json());
-app.use(bodyParserjson({ type:'application/vnd.api+json' }));
+app.use(bodyParser.json({ type:'application/vnd.api+json' }));
 
 app.use(bodyParser.urlencoded({extended : true }));
 
